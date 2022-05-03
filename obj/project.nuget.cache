@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "t2HDLpC5+2cQaNIVogxjJ/wjZ6qXsC9aUDKToX3nqTVVH/kHl3NBzfIvihRAblN19mrzuJzFj2/aCZ5zSfMDHA==",
+  "success": true,
+  "projectFilePath": "/home/kirill/RiderProjects/YandexMusicApi/YandexMusicApi.csproj",
+  "expectedPackageFiles": [
+    "/home/kirill/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,12 @@
+/home/kirill/RiderProjects/YandexMusicApi/obj/Debug/net5.0/YandexMusicApi.csproj.AssemblyReference.cache
+/home/kirill/RiderProjects/YandexMusicApi/obj/Debug/net5.0/YandexMusicApi.GeneratedMSBuildEditorConfig.editorconfig
+/home/kirill/RiderProjects/YandexMusicApi/obj/Debug/net5.0/YandexMusicApi.AssemblyInfoInputs.cache
+/home/kirill/RiderProjects/YandexMusicApi/obj/Debug/net5.0/YandexMusicApi.AssemblyInfo.cs
+/home/kirill/RiderProjects/YandexMusicApi/obj/Debug/net5.0/YandexMusicApi.csproj.CoreCompileInputs.cache
+/home/kirill/RiderProjects/YandexMusicApi/bin/Debug/net5.0/YandexMusicApi.deps.json
+/home/kirill/RiderProjects/YandexMusicApi/bin/Debug/net5.0/YandexMusicApi.dll
+/home/kirill/RiderProjects/YandexMusicApi/bin/Debug/net5.0/ref/YandexMusicApi.dll
+/home/kirill/RiderProjects/YandexMusicApi/bin/Debug/net5.0/YandexMusicApi.pdb
+/home/kirill/RiderProjects/YandexMusicApi/obj/Debug/net5.0/YandexMusicApi.dll
+/home/kirill/RiderProjects/YandexMusicApi/obj/Debug/net5.0/ref/YandexMusicApi.dll
+/home/kirill/RiderProjects/YandexMusicApi/obj/Debug/net5.0/YandexMusicApi.pdb
