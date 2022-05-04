@@ -21,5 +21,13 @@ namespace YandexMusicApi
             string urlToRequest = "/genres";
             return PostGet.Get(baseUrl + urlToRequest);
         }
+
+        public static string GetAllFeed()
+        {
+            string urlToRequest = "/feed";
+            string tokenRequestHeader = "Authorization: OAuth " + Token.token;
+
+            return PostGet.GetWithAuthorization(baseUrl + urlToRequest, tokenRequestHeader);
+        }
     }
 }

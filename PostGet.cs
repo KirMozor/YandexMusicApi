@@ -41,5 +41,28 @@ namespace YandexMusicApi
                 return response;
             } 
         }
+
+        public static string GetWithAuthorization(string url, string tokenRequestHeader)
+        {
+            if (Token.token != "")
+            {
+                string acceptHeader = "accept: */*";
+                using (var webClient = new WebClient())
+                {
+                    var header = new WebHeaderCollection();
+                    header.Add(acceptHeader);
+                    header.Add(tokenRequestHeader);
+                
+                    webClient.Headers = header;
+                
+                    var response = webClient.DownloadString(url);
+                    return response;
+                } 
+            }
+            else
+            {
+                return "Not token";
+            }
+        }
     }
 }
