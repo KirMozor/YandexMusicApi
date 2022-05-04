@@ -9,5 +9,11 @@ namespace YandexMusicApi
             string urlToRequest = "/search?text=" + searchRequest + "&page=" + page + "&type=" + typeSearch + "&nococrrect=" + nocorrect;
             return PostGet.Get(baseUrl + urlToRequest);
         }
+
+        public static string SearchBest(string searchRequest)
+        {
+            string urlToRequest = "/search/suggest?part=" + searchRequest;
+            return PostGet.Get(baseUrl + urlToRequest);
+        }
     }
 }
