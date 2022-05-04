@@ -15,5 +15,11 @@ namespace YandexMusicApi
             string urlToRequest = "/search/suggest?part=" + searchRequest;
             return PostGet.Get(baseUrl + urlToRequest);
         }
+
+        public static string GetAllGenres()
+        {
+            string urlToRequest = "/genres";
+            return PostGet.Get(baseUrl + urlToRequest);
+        }
     }
 }
