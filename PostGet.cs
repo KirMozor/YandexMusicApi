@@ -44,29 +44,21 @@ namespace YandexMusicApi
 
         public static string GetWithHeaders(string url, List<string> header)
         {
-            if (Token.token != "")
+            using (var webClient = new WebClient())
             {
-                using (var webClient = new WebClient())
+                var headers = new WebHeaderCollection();
+
+                foreach (var i in header)
                 {
-                    var headers = new WebHeaderCollection();
-
-                    foreach (var i in header)
-                    {
-                        headers.Add(i);
-                    }
-
-                    webClient.Headers = headers;
+                    headers.Add(i);
+                }
+                webClient.Headers = headers;
                 
-                    var response = webClient.DownloadString(url);
-                    return response;
-                } 
-            }
-            else
-            {
-                return "Not token";
+                var response = webClient.DownloadString(url);
+                return response;
             }
         }
-
+        
         public static string PostDataAndHeaders(string url, string data, List<string> header)
         {
             string resultPost;

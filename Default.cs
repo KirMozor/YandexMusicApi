@@ -40,18 +40,26 @@ namespace YandexMusicApi
 
         public static JObject GetAllFeed()
         {
-            string urlToRequest = "/feed";
-            var header = new List<string>();
+            if (Token.token != "")
+            {
+                string urlToRequest = "/feed";
+                var header = new List<string>();
             
-            header.Add("accept: */*");
-            header.Add("Authorization: OAuth " + Token.token);
+                header.Add("accept: */*");
+                header.Add("Authorization: OAuth " + Token.token);
 
-            string result = PostGet.GetWithHeaders(baseUrl + urlToRequest, header);
+                string result = PostGet.GetWithHeaders(baseUrl + urlToRequest, header);
             
-            JObject adResponse =
-                Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
+                JObject adResponse =
+                    Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
             
-            return adResponse;
+                return adResponse;
+            }
+            else
+            {
+                string result = "{\"error\": \"Not token\"}";
+                return Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
+            }
         }
     }
 }
