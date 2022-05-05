@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 
@@ -15,7 +17,6 @@ namespace YandexMusicApi
             request.Method = "POST";
             byte[] byteArray = System.Text.Encoding.UTF8.GetBytes(data);
 
-            //записываем данные в поток запроса
             using (Stream dataStream = request.GetRequestStream())
             {
                 dataStream.Write(byteArray, 0, byteArray.Length);
@@ -63,6 +64,38 @@ namespace YandexMusicApi
             {
                 return "Not token";
             }
+        }
+
+        public static string PostDataAndHeaders(string url, string data, List<string> header)
+        {
+            string resultPost;
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            request.UserAgent = userAgent;
+            request.Method = "POST";
+            byte[] byteArray = System.Text.Encoding.UTF8.GetBytes(data);
+
+            using (Stream dataStream = request.GetRequestStream())
+            {
+                dataStream.Write(byteArray, 0, byteArray.Length);
+            }
+
+            foreach (var i in header)
+            {
+                request.Headers.Add(i);
+            }
+            
+            WebResponse response = request.GetResponse();
+
+            using (Stream stream = response.GetResponseStream())
+            {
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    resultPost = reader.ReadToEnd();
+                }
+            }
+
+            response.Close();
+            return resultPost;
         }
     }
 }
