@@ -52,7 +52,7 @@ namespace YandexMusicApi
             }
         }
 
-        public static JObject SettingsGet()
+        public static JObject ShowSettings()
         {
             if (Token.token != "")
             {
@@ -62,6 +62,28 @@ namespace YandexMusicApi
                 header.Add("Authorization: OAuth " + Token.token);
                 
                 string result = PostGet.GetWithHeaders(baseUrl + urlToRequest, header);
+                JObject adResponse = Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
+                return adResponse;
+            }
+            else
+            {
+                string result = "{\"error\": \"Not token\"}";
+                return Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
+            }
+        }
+
+        public static JObject SettingsChange(string data)
+        {
+            if (Token.token != "")
+            {
+                string urlToRequest = "/account/settings";
+                
+                var header = new List<string>();
+                header.Add("accept: application/json");
+                header.Add("Authorization: OAuth " + Token.token);
+                header.Add("Content-Type: application/x-www-form-urlencoded");
+
+                string result = PostGet.PostDataAndHeaders(baseUrl + urlToRequest, data, header);
                 JObject adResponse = Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
                 return adResponse;
             }
