@@ -6,7 +6,7 @@ namespace YandexMusicApi
         
         public static string Search(string searchRequest, int page = 0, string typeSearch = "all", bool nocorrect = false)
         {
-            string urlToRequest = "/search?text=" + searchRequest + "&page=" + page + "&type=" + typeSearch + "&nococrrect=" + nocorrect;
+            string urlToRequest = "/search?text=" + searchRequest + "&page=" + page + "&type=" + typeSearch + "&nocorrect=" + nocorrect;
             return PostGet.Get(baseUrl + urlToRequest);
         }
 
