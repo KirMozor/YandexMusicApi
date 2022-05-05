@@ -93,5 +93,26 @@ namespace YandexMusicApi
                 return Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
             }
         }
+
+        public static JObject ShowInformAccount()
+        {
+            if (Token.token != "")
+            {
+                string urlToRequest = "/account/status";
+            
+                var header = new List<string>();
+                header.Add("accept: application/json");
+                header.Add("Authorization: OAuth " + Token.token);
+
+                string result = PostGet.GetWithHeaders(baseUrl + urlToRequest, header);
+                JObject adResponse = Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
+                return adResponse;
+            }
+            else
+            {
+                string result = "{\"error\": \"Not token\"}";
+                return Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
+            }
+        }
     }
 }
