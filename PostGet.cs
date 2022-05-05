@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
@@ -43,18 +42,20 @@ namespace YandexMusicApi
             } 
         }
 
-        public static string GetWithAuthorization(string url, string tokenRequestHeader)
+        public static string GetWithHeaders(string url, List<string> header)
         {
             if (Token.token != "")
             {
-                string acceptHeader = "accept: */*";
                 using (var webClient = new WebClient())
                 {
-                    var header = new WebHeaderCollection();
-                    header.Add(acceptHeader);
-                    header.Add(tokenRequestHeader);
-                
-                    webClient.Headers = header;
+                    var headers = new WebHeaderCollection();
+
+                    foreach (var i in header)
+                    {
+                        headers.Add(i);
+                    }
+
+                    webClient.Headers = headers;
                 
                     var response = webClient.DownloadString(url);
                     return response;

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 
 namespace YandexMusicApi
@@ -40,9 +41,12 @@ namespace YandexMusicApi
         public static JObject GetAllFeed()
         {
             string urlToRequest = "/feed";
-            string tokenRequestHeader = "Authorization: OAuth " + Token.token;
+            var header = new List<string>();
+            
+            header.Add("accept: */*");
+            header.Add("Authorization: OAuth " + Token.token);
 
-            string result = PostGet.GetWithAuthorization(baseUrl + urlToRequest, tokenRequestHeader);
+            string result = PostGet.GetWithHeaders(baseUrl + urlToRequest, header);
             
             JObject adResponse =
                 Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
