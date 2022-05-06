@@ -29,5 +29,27 @@ namespace YandexMusicApi
                 return Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
             }
         }
+
+        public static JObject GetTrackIdByRating(string artistId)
+        {
+            if (Token.token != "")
+            {
+                string urlToRequest = "/artists/" + artistId + "/track-ids-by-rating";
+                var header = new List<string>();
+            
+                header.Add("accept: */*");
+                header.Add("Authorization: OAuth " + Token.token);
+
+                string result = PostGet.GetWithHeaders(baseUrl + urlToRequest, header);
+                JObject adResponse =
+                    Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
+                return adResponse;
+            }
+            else
+            {
+                string result = "{\"error\": \"Not token\"}";
+                return Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
+            }
+        }
     }
 }
