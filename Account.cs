@@ -72,7 +72,7 @@ namespace YandexMusicApi
             }
         }
 
-        public static JObject SettingsChange(string data)
+        public static JObject SettingsChanged(string data)
         {
             if (Token.token != "")
             {
