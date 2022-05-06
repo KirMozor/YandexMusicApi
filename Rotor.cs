@@ -28,5 +28,27 @@ namespace YandexMusicApi
                 return Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
             }
         }
+
+        public static JObject StationDashboard()
+        {
+            if (Token.token != "")
+            {
+                string urlToRequest = "/rotor/stations/dashboard";
+                var header = new List<string>();
+            
+                header.Add("accept: */*");
+                header.Add("Authorization: OAuth " + Token.token);
+                
+                string result = PostGet.GetWithHeaders(baseUrl + urlToRequest, header);
+                JObject adResponse =
+                    Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
+                return adResponse;
+            }
+            else
+            {
+                string result = "{\"error\": \"Not token\"}";
+                return Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
+            }
+        }
     }
 }
