@@ -9,7 +9,7 @@ namespace YandexMusicApi
 
         public static JObject GetTrack(string uid, string kind, string page = "0", string pageSize = "20")
         {
-            string urlToRequest = string.Format("/users/{0}/playlists/{1}?page={2}&page-size={3}", uid, kind, page, pageSize);
+            string urlToRequest = "/users/" + uid + "/playlists/" + kind + "?page=" + page + "&page-size=" + pageSize;
             
             var header = new List<string>();
             
@@ -20,6 +20,28 @@ namespace YandexMusicApi
             JObject adResponse =
                 Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
             return adResponse;
+        }
+
+        public static JObject GetPlaylistUser(string userId)
+        {
+            if (Token.token != "")
+            {
+                string urlToRequest = "/users/" + userId + "/playlists/list";
+                var header = new List<string>();
+
+                header.Add("accept: application/json");
+                header.Add("Authorization: OAuth " + Token.token);
+                
+                string result = PostGet.GetWithHeaders(baseUrl + urlToRequest, header);
+                JObject adResponse =
+                    Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
+                return adResponse;
+            }
+            else
+            {
+                string result = "{\"error\": \"Not token\"}";
+                return Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
+            }
         }
     }
 }
