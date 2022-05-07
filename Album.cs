@@ -20,5 +20,19 @@ namespace YandexMusicApi
                 Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
             return adResponse;
         }
+
+        public static JObject GetTracks(string albumId)
+        {
+            string urlToRequest = "/albums/" + albumId + "/with-tracks";
+            
+            var header = new List<string>();
+            
+            header.Add("accept: application/json");
+
+            string result = PostGet.GetWithHeaders(baseUrl + urlToRequest, header);
+            JObject adResponse =
+                Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
+            return adResponse;
+        }
     }
 }
