@@ -53,11 +53,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/kirill/MyProject/Git/YandexMusicApi/YandexMusicApi.csproj",
+      "projectUniqueName": "/home/kirill/RiderProjects/YandexMusicApi/YandexMusicApi.csproj",
       "projectName": "YandexMusicApi",
-      "projectPath": "/home/kirill/MyProject/Git/YandexMusicApi/YandexMusicApi.csproj",
+      "projectPath": "/home/kirill/RiderProjects/YandexMusicApi/YandexMusicApi.csproj",
       "packagesPath": "/home/kirill/.nuget/packages/",
-      "outputPath": "/home/kirill/MyProject/Git/YandexMusicApi/obj/",
+      "outputPath": "/home/kirill/RiderProjects/YandexMusicApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/kirill/.nuget/NuGet/NuGet.Config"
