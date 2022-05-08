@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v4WctdsYY27IK4VgoC4Zdw9vE8UC45gGpdkstVtSBEulYDHtmqKcroG+9lC5qg2qELqAasH9OS+AvqdLzX7nPw==",
+  "dgSpecHash": "Fuc/CgBm3FVOGtW8E2U98I4g1sQiiKYqJ96IQHskVUZZT06Snmf5P8Lo6XkJbAjS6rvukHJelu4NQH01auLE9w==",
   "success": true,
-  "projectFilePath": "/home/kirill/MyProject/Git/YandexMusicApi/YandexMusicApi.csproj",
+  "projectFilePath": "/home/kirill/RiderProjects/YandexMusicApi/YandexMusicApi.csproj",
   "expectedPackageFiles": [
     "/home/kirill/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
     "/home/kirill/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
