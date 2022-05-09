@@ -90,5 +90,20 @@ namespace YandexMusicApi
                 return Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
             }
         }
+
+        public static JObject GetLikesTrack(string userId)
+        {
+            string urlToRequest = "/users/" + userId + "/likes/tracks";
+            
+            var header = new List<string>();
+
+            header.Add("accept: application/json");
+
+            string result = PostGet.GetWithHeaders(baseUrl + urlToRequest, header);
+            
+            JObject adResponse =
+                Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
+            return adResponse;
+        }
     }
 }
