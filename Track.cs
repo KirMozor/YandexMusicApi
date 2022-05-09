@@ -105,5 +105,37 @@ namespace YandexMusicApi
                 Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
             return adResponse;
         }
+
+        public static JObject GetInformTrack(List<string> idTracks)
+        {
+            string urlToRequest = "/tracks";
+
+            var header = new List<string>();
+            
+            header.Add("accept: application/json");
+            header.Add("Content-Type: application/x-www-form-urlencoded");
+            
+            string tracksIdString = "";
+            int countTracksId = idTracks.Count;
+
+            for (int i = 0; i < idTracks.Count; i++)
+            {
+                if (countTracksId - 1 == i)
+                {
+                    tracksIdString += idTracks[i];
+                }
+                else
+                {
+                    tracksIdString += idTracks[i] + ",";
+                }
+            }
+                
+            string dataRequest = "track-ids=" + tracksIdString + "&with-positions=false";
+            
+            string result = PostGet.PostDataAndHeaders(baseUrl + urlToRequest, dataRequest, header);
+            JObject adResponse =
+                Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
+            return adResponse;
+        }
     }
 }
