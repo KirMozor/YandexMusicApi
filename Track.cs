@@ -1,5 +1,11 @@
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Xml.Linq;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace YandexMusicApi
@@ -12,17 +18,17 @@ namespace YandexMusicApi
         {
             if (Token.token != "")
             {
-                string urlToRequest = "/users/"+ userId + "/likes/tracks/add-multiple";
-            
+                string urlToRequest = "/users/" + userId + "/likes/tracks/add-multiple";
+
                 var header = new List<string>();
-            
+
                 header.Add("accept: application/json");
                 header.Add("Content-Type: application/x-www-form-urlencoded");
                 header.Add("Authorization: OAuth " + Token.token);
-            
+
                 string likeTracksIdString = "";
                 int countTracksId = likeTracks.Count;
-            
+
                 for (int i = 0; i < likeTracks.Count; i++)
                 {
                     if (countTracksId - 1 == i)
@@ -36,7 +42,7 @@ namespace YandexMusicApi
                 }
 
                 string dataRequest = "track-ids=" + likeTracksIdString;
-            
+
                 string result = PostGet.PostDataAndHeaders(baseUrl + urlToRequest, dataRequest, header);
                 JObject adResponse =
                     Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
@@ -75,9 +81,9 @@ namespace YandexMusicApi
                         removeTracksIdString += likeTracks[i] + ",";
                     }
                 }
-                
+
                 string dataRequest = "track-ids=" + removeTracksIdString;
-            
+
                 string result = PostGet.PostDataAndHeaders(baseUrl + urlToRequest, dataRequest, header);
                 JObject adResponse =
                     Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
@@ -94,13 +100,13 @@ namespace YandexMusicApi
         public static JObject GetLikesTrack(string userId)
         {
             string urlToRequest = "/users/" + userId + "/likes/tracks";
-            
+
             var header = new List<string>();
 
             header.Add("accept: application/json");
 
             string result = PostGet.GetWithHeaders(baseUrl + urlToRequest, header);
-            
+
             JObject adResponse =
                 Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
             return adResponse;
@@ -111,10 +117,10 @@ namespace YandexMusicApi
             string urlToRequest = "/tracks";
 
             var header = new List<string>();
-            
+
             header.Add("accept: application/json");
             header.Add("Content-Type: application/x-www-form-urlencoded");
-            
+
             string tracksIdString = "";
             int countTracksId = idTracks.Count;
 
@@ -129,13 +135,89 @@ namespace YandexMusicApi
                     tracksIdString += idTracks[i] + ",";
                 }
             }
-                
+
             string dataRequest = "track-ids=" + tracksIdString + "&with-positions=false";
-            
+
             string result = PostGet.PostDataAndHeaders(baseUrl + urlToRequest, dataRequest, header);
             JObject adResponse =
                 Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
             return adResponse;
+        }
+
+        public static JObject GetDownloadInfo(string trackId)
+        {
+            string urlToRequest = "/tracks/" + trackId + "/download-info";
+
+            var header = new List<string>();
+
+            header.Add("accept: application/json");
+
+            string result = PostGet.GetWithHeaders(baseUrl + urlToRequest, header);
+
+            JObject adResponse =
+                Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
+            return adResponse;
+        }
+
+        public static JObject GetDownloadInfoWithToken(string trackId)
+        {
+            if (Token.token != "")
+            {
+                string urlToRequest = "/tracks/" + trackId + "/download-info";
+
+                var header = new List<string>();
+
+                header.Add("accept: application/json");
+                header.Add("Authorization: OAuth " + Token.token);
+
+                string result = PostGet.GetWithHeaders(baseUrl + urlToRequest, header);
+
+                dynamic adResponse = JsonConvert.DeserializeObject(result);
+                return adResponse;
+            }
+            else
+            {
+                string result = "{\"error\": \"Not token\"}";
+                return Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
+            }
+        }
+
+        private static Dictionary<string, string> GetXml(string vvod)
+        {
+            XDocument doc = XDocument.Parse(vvod);
+            var el = doc.Root.Elements();
+            Dictionary<string, string> result = new Dictionary<string, string>();
+
+            foreach (var i in el)
+            {
+                result.Add(i.Name.ToString(), i.Value);
+            }
+
+            return result;
+        }
+
+        public static string GetDirectLink(string downloadInfoUrl, string codec = "mp3")
+        {
+            string resultGetXml = PostGet.Get(downloadInfoUrl);
+            Console.WriteLine(resultGetXml);
+
+            var xmlResult = GetXml(resultGetXml);
+
+            string host = xmlResult["host"];
+            string path = xmlResult["path"];
+            string ts = xmlResult["ts"];
+            string s = xmlResult["s"];
+            
+            var secret = $"XGRlBW9FXlekgbPrRHuSiA{path.Substring(1, path.Length-1)}{s}";
+            var md5 = MD5.Create();
+            var md5Hash = md5.ComputeHash(Encoding.UTF8.GetBytes(secret));
+            var hmacsha1 = new HMACSHA1();
+            var hmasha1Hash = hmacsha1.ComputeHash(md5Hash);
+            var sign = BitConverter.ToString(hmasha1Hash).Replace("-", "").ToLower();
+      
+            var link = $"https://{host}/get-{codec}/{sign}/{ts}/{path}";
+
+            return link;
         }
     }
 }
