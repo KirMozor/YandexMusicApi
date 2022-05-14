@@ -231,5 +231,28 @@ namespace YandexMusicApi
             dynamic adResponse = JsonConvert.DeserializeObject(result);
             return adResponse;
         }
+        
+        public static JObject GetDislikesTracks(string userId)
+        {
+            if (Token.token != "")
+            {
+                string urlToRequest = "/users/" + userId + "/dislikes/tracks";
+
+                var header = new List<string>();
+
+                header.Add("accept: application/json");
+                header.Add("Authorization: OAuth AQAAAABKDB_oAAG8XqPrRfHG50TTuJ97XwurTds");
+
+                string result = PostGet.GetWithHeaders(baseUrl + urlToRequest, header);
+                
+                dynamic adResponse = JsonConvert.DeserializeObject(result);
+                return adResponse;
+            }
+            else
+            {
+                string result = "{\"error\": \"Not token\"}";
+                return Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
+            }
+        }
     }
 }
