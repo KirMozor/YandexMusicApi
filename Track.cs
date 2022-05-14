@@ -254,5 +254,19 @@ namespace YandexMusicApi
                 return Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(result);
             }
         }
+
+        public static JObject GetSupplement(string trackId)
+        {
+            string urlToRequest = "/tracks/" + trackId + "/supplement";
+
+            var header = new List<string>();
+
+            header.Add("accept: application/json");
+
+            string result = PostGet.GetWithHeaders(baseUrl + urlToRequest, header);
+                
+            dynamic adResponse = JsonConvert.DeserializeObject(result);
+            return adResponse;
+        }
     }
 }
