@@ -217,5 +217,19 @@ namespace YandexMusicApi
             
             return $"https://{host}/get-{codec}/{sign}/{ts}/{path}";
         }
+
+        public static JObject GetTrackSimilar(string trackId)
+        {
+            string urlToRequest = "/tracks/" + trackId + "/similar";
+            
+            var header = new List<string>();
+
+            header.Add("accept: application/json");
+            
+            string result = PostGet.GetWithHeaders(baseUrl + urlToRequest, header);
+
+            dynamic adResponse = JsonConvert.DeserializeObject(result);
+            return adResponse;
+        }
     }
 }
