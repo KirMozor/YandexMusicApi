@@ -208,16 +208,14 @@ namespace YandexMusicApi
             string ts = xmlResult["ts"];
             string s = xmlResult["s"];
             
-            var secret = $"XGRlBW9FXlekgbPrRHuSiA{path.Substring(1, path.Length-1)}{s}";
-            var md5 = MD5.Create();
-            var md5Hash = md5.ComputeHash(Encoding.UTF8.GetBytes(secret));
-            var hmacsha1 = new HMACSHA1();
-            var hmasha1Hash = hmacsha1.ComputeHash(md5Hash);
-            var sign = BitConverter.ToString(hmasha1Hash).Replace("-", "").ToLower();
-      
-            var link = $"https://{host}/get-{codec}/{sign}/{ts}/{path}";
-
-            return link;
+            string secret = $"XGRlBW9FXlekgbPrRHuSiA{path.Substring(1, path.Length-1)}{s}";
+            MD5 md5 = MD5.Create();
+            byte[] md5Hash = md5.ComputeHash(Encoding.UTF8.GetBytes(secret));
+            HMACSHA1 hmacsha1 = new HMACSHA1();
+            byte[] hmasha1Hash = hmacsha1.ComputeHash(md5Hash);
+            string sign = BitConverter.ToString(hmasha1Hash).Replace("-", "").ToLower();
+            
+            return $"https://{host}/get-{codec}/{sign}/{ts}/{path}";
         }
     }
 }
