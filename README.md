@@ -16,8 +16,8 @@ But the author stopped continuing to develop this library.
 ### How to install?
 `dotnet add PROJECT package YandexMusicApi`
 
-#####[Documentation](https://github.com/KirMozor/YandexMusicApi/wiki) 
-#####[Example project](https://github.com/KirMozor/Yamux)
+##### [Documentation](https://github.com/KirMozor/YandexMusicApi/wiki) 
+##### [Example project](https://github.com/KirMozor/Yamux)
 
 
 ### [_Follow me Telegram_](https://t.me/kirmozor)
