@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.com/KirMozor/YandexMusicApi.svg?branch=master)](https://travis-ci.com/KirMozor/YandexMusicApi)
 [![Nuget API](https://img.shields.io/nuget/dt/YandexMusicApi)](https://www.nuget.org/packages/YandexMusicApi/)
 
 # YandexMusicApi
