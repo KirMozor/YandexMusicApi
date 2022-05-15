@@ -2,8 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YandexMusicApi", "YandexMusicApi.csproj", "{FCE856DF-3172-407D-A718-677BEC97983F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestYadnexMusicApi", "..\TestYadnexMusicApi\TestYadnexMusicApi.csproj", "{5EF19383-EEA6-4D5B-891D-09A9456A3A6D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,9 +12,5 @@ Global
 		{FCE856DF-3172-407D-A718-677BEC97983F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCE856DF-3172-407D-A718-677BEC97983F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCE856DF-3172-407D-A718-677BEC97983F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5EF19383-EEA6-4D5B-891D-09A9456A3A6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5EF19383-EEA6-4D5B-891D-09A9456A3A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5EF19383-EEA6-4D5B-891D-09A9456A3A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5EF19383-EEA6-4D5B-891D-09A9456A3A6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

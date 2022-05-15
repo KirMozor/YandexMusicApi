@@ -1,7 +1,9 @@
+[![Build Status](https://travis-ci.com/KirMozor/YandexMusicApi.svg?branch=master)](https://travis-ci.com/KirMozor/YandexMusicApi)
+[![Nuget API](https://img.shields.io/nuget/dt/YandexMusicApi)](https://www.nuget.org/packages/YandexMusicApi/)
+
 # YandexMusicApi
 
 ### _Cross-platform Yandex Music API for C#_
-
 
 Is the alteration of the unofficial [API YandexMusic on Python](https://github.com/MarshalX/yandex-music-api)
 
@@ -11,6 +13,11 @@ Is the alteration of the unofficial [API YandexMusic on Python](https://github.c
 But the author stopped continuing to develop this library.
 [There is her fork](https://github.com/Winster332/Yandex.Music.Api), but the library is not cross-platform, and when I asked the author to make it under Linux, he said that I should do it myself
 
-At the moment, the library that I am developing is not available in Nuget, because it is not ready
+### How to install?
+`dotnet add PROJECT package YandexMusicApi`
 
-##### [_Follow me Telegram_](https://t.me/kirmozor)
+#####[Documentation](https://github.com/KirMozor/YandexMusicApi/wiki) 
+#####[Example project](https://github.com/KirMozor/Yamux)
+
+
+### [_Follow me Telegram_](https://t.me/kirmozor)
