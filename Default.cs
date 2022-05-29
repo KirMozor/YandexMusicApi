@@ -101,5 +101,18 @@ namespace YandexMusicApi
                 return JsonConvert.DeserializeObject<JObject>(result);
             }
         }
+
+        public static JObject GetNewPlaylists()
+        {
+            string urlToRequest = "/landing3/new-playlists";
+            List<string> header = new List<string>();
+            
+            string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
+
+            JObject adResponse =
+                JsonConvert.DeserializeObject<JObject>(result);
+
+            return adResponse;
+        }
     }
 }
