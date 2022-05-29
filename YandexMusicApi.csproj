@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <PackageId>YandexMusicApi</PackageId>
-        <version>1.0.2</version>
+        <version>1.0.4</version>
 		<Authors>KirMozor</Authors>
         <Description>Open-Source wrapper over the Yandex Music Api</Description>
         <PackageIconUrl>https://download.cdn.yandex.net/from/yandex.ru/support/ru/music/files/icon_main.png</PackageIconUrl>
@@ -10,7 +10,7 @@
         <PackageProjectUrl>https://github.com/KirMozor/YandexMusicApi</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/KirMozor/YandexMusicApi/blob/main/LICENSE</PackageLicenseUrl>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
