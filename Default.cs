@@ -69,16 +69,37 @@ namespace YandexMusicApi
         {
             string urlToRequest = "/landing3/chart";
             List<string> header = new List<string>();
-
-            header.Add("accept: */*");
-            header.Add("Authorization: OAuth " + Token.token);
-
+            
             string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
 
             JObject adResponse =
                 JsonConvert.DeserializeObject<JObject>(result);
 
             return adResponse;
+        }
+
+        public static JObject GetNewReleases()
+        {
+            if (Token.token != "")
+            {
+                string urlToRequest = "/landing3?blocks=new-releases";
+                List<string> header = new List<string>();
+            
+                header.Add("accept: */*");
+                header.Add("Authorization: OAuth " + Token.token);
+            
+                string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
+
+                JObject adResponse =
+                    JsonConvert.DeserializeObject<JObject>(result);
+
+                return adResponse;
+            }
+            else
+            {
+                string result = "{\"error\": \"Not token\"}";
+                return JsonConvert.DeserializeObject<JObject>(result);
+            }
         }
     }
 }
