@@ -104,8 +104,35 @@ namespace YandexMusicApi
 
         public static JObject GetNewPlaylists()
         {
-            string urlToRequest = "/landing3/new-playlists";
+            if (Token.token != "")
+            {
+                string urlToRequest = "/landing3/new-playlists";
+                List<string> header = new List<string>();
+            
+                header.Add("accept: */*");
+                header.Add("Authorization: OAuth " + Token.token);
+            
+                string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
+
+                JObject adResponse =
+                    JsonConvert.DeserializeObject<JObject>(result);
+
+                return adResponse;
+            }
+            else
+            {
+                string result = "{\"error\": \"Not token\"}";
+                return JsonConvert.DeserializeObject<JObject>(result);
+            }
+        }
+
+        public static JObject GetPodcasts()
+        {
+            string urlToRequest = "/landing3/podcasts";
             List<string> header = new List<string>();
+            
+            header.Add("accept: */*");
+            header.Add("Authorization: OAuth " + Token.token);
             
             string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
 
