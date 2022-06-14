@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -43,6 +44,19 @@ namespace YandexMusicApi
                 string result = "{\"error\": \"Not token\"}";
                 return JsonConvert.DeserializeObject<JObject>(result);
             }
+        }
+
+        public static JObject InformPlaylist(string playlistUid, string playlistKind)
+        {
+            string urlToRequest = "/users/" + playlistUid + "/playlists/" + playlistKind;
+            List<string> header = new List<string>();
+
+            header.Add("accept: */*");
+
+            string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
+            JObject adResponse =
+                JsonConvert.DeserializeObject<JObject>(result);
+            return adResponse;
         }
     }
 }

@@ -66,5 +66,18 @@ namespace YandexMusicApi
                 JsonConvert.DeserializeObject<JObject>(result);
             return adResponse;
         }
+
+        public static JObject InformArtist(string artistId)
+        {
+            string urlToRequest = "/artists/" + artistId;
+            List<string> header = new List<string>();
+
+            header.Add("accept: */*");
+
+            string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
+            JObject adResponse =
+                JsonConvert.DeserializeObject<JObject>(result);
+            return adResponse;
+        }
     }
 }
