@@ -51,5 +51,27 @@ namespace YandexMusicApi
                 return JsonConvert.DeserializeObject<JObject>(result);
             }
         }
+
+        public static JObject GetTrack(string rotorId)
+        {
+            if (Token.token != "")
+            {
+                string urlToRequest = "/rotor/station/" + rotorId + "/tracks";
+                List<string> header = new List<string>();
+
+                header.Add("accept: */*");
+                header.Add("Authorization: OAuth " + Token.token);
+
+                string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
+                JObject adResponse =
+                    JsonConvert.DeserializeObject<JObject>(result);
+                return adResponse;
+            }
+            else
+            {
+                string result = "{\"error\": \"Not token\"}";
+                return JsonConvert.DeserializeObject<JObject>(result);
+            }
+        }
     }
 }
