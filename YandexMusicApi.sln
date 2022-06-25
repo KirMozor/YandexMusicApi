@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YandexMusicApi", "YandexMusicApi.csproj", "{FCE856DF-3172-407D-A718-677BEC97983F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "..\ConsoleApp1\ConsoleApp1\ConsoleApp1.csproj", "{001BD24D-DBBE-4B78-8497-23AFCB456788}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{FCE856DF-3172-407D-A718-677BEC97983F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCE856DF-3172-407D-A718-677BEC97983F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCE856DF-3172-407D-A718-677BEC97983F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{001BD24D-DBBE-4B78-8497-23AFCB456788}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{001BD24D-DBBE-4B78-8497-23AFCB456788}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{001BD24D-DBBE-4B78-8497-23AFCB456788}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{001BD24D-DBBE-4B78-8497-23AFCB456788}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
