@@ -1,16 +1,16 @@
 GetDirectAlbums
 ==================================
-Возвращает альбомы артиста
+Returns albums of an artist.
 
 
-Входные данные:
+Input data:
 -----------
 
-* ID артиста. string artistId
-* Страница выдачи. string page. Параметр по умолчанию 0
-* Размер выдачи (кол-во элементов на ней). string pageSize. Параметр по умолчанию 20
+* Artist ID. string artistId
+* Output page. string page. Параметр по умолчанию 0
+* Output size (how much elements in a page). string pageSize. Default value: 20
 
-Пример использования:
+Usage example:
 ---------
 .. code-block:: csharp
      :linenos:
