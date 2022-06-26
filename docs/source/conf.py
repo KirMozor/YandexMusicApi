@@ -48,17 +48,7 @@ exclude_patterns = []
 #
 
 # These folders are copied to the documentation's HTML output
-html_static_path = ['_static']
-
 html_search_language = 'ru'
 
 html_title = 'YandexMusicApi'
-html_theme = 'furo'
-
-html_css_files = [
-    'css/custom.css',
-]
-
-html_theme_options = {
-    'navigation_with_keys': True,
-}
+html_theme = 'sphinx_rtd_theme'
