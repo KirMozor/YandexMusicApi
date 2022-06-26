@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) KirMozor <https://github.com/KirMozor>
+# This file is distributed under the same license as the YandexMusicApi
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: YandexMusicApi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-26 16:11+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../YandexMusicApi.Account.Promocode.rst:2
+#: 76ce436f83584ab9acb157a8f17967ee
+msgid "Promocode"
+msgstr "Promocode"
+
+#: ../../YandexMusicApi.Account.Promocode.rst:3
+#: 05bcd1238e5e4c6f8da3e5762fd1a76c
+msgid "Этот метод активирует промокод на ваш аккаунт"
+msgstr "This method redeems a promocode to your account."
+
+#: ../../YandexMusicApi.Account.Promocode.rst:6
+#: c3e734eb2b0e4be0b04fe1b0fc5494a7
+msgid "Входные данные:"
+msgstr "Input data:"
+
+#: ../../YandexMusicApi.Account.Promocode.rst:8
+#: 77edd2a4ff504d0e90c68df5b27c64e9
+msgid "Токен"
+msgstr "Token"
+
+#: ../../YandexMusicApi.Account.Promocode.rst:9
+#: a3f914ee8a794334ade7dc4160e2946c
+msgid "Промокод: string promocode"
+msgstr "Promocode: string promocode"
+
+#: ../../YandexMusicApi.Account.Promocode.rst:10
+#: 0ed5d630a48a4dbca1c3b2a8d8fddc07
+msgid "Язык: string language"
+msgstr "Language: string language"
+
+#: ../../YandexMusicApi.Account.Promocode.rst:13
+#: 53f8028846314a91a8b9b04cc95646d1
+msgid "Пример использования:"
+msgstr "Usage example"
+
