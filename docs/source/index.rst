@@ -3,14 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Добро пожаловать в YandexMusicApi wiki
+Welcome to the YandexMusicApi wiki!
 --------------------------------------
 
-Здесь я постараюсь в простой форме объяснить, как использовать API. Начнем с самого простого, вот как установить библиотеку в ваш проект:
+Here I'll try to explain how to use this API, in a simple way. Let's start off by adding the library in your project:
 ::
   dotnet add PROJECTNAME package YandexMusicApi
 
-Теперь перейдите на страницу примера библиотеки, вот ссылка_. Конечно, вам понадобятся и другие методы, используйте для этого поиск!
+Now go to the library example change, here is the link_. Of course, you'll need other methods, use search for this!
 
 .. _ссылка: http://librerussia.blogspot.ru/
 
