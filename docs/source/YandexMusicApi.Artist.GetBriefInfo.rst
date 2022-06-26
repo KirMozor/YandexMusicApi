@@ -1,14 +1,13 @@
 GetBriefInfo
 ==================================
-Возвращает новости артиста
+Returns artist news.
 
-
-Входные данные:
+Input data:
 -----------
 
-* ID артиста. string artistId
+* Artist ID. string artistId
 
-Пример использования:
+Usage example:
 ---------
 .. code-block:: csharp
      :linenos:
