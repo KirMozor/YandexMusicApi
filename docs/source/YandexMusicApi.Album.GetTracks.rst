@@ -1,12 +1,12 @@
 GetTracks
 ==================================
-Возвращает треки альбома
+Returns songs in an album
 
 
 Входные данные:
 -----------
 
-* ID альбома. string albumId
+* Album ID. string albumId
 
 Пример использования:
 ---------
