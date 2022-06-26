@@ -1,14 +1,14 @@
 Expirements
 ==================================
-Show if your account is enrolled to Yandex Music Experiments.
+Этот метод нужен чтобы показать, учавствует ли ваш аккаунт в экспериментах Yandex
 
 
-Input data:
+Входные данные:
 -----------
 
-* Token
+* Токен
 
-Usage example:
+Пример использования:
 ---------
 .. code-block:: csharp
      :linenos:

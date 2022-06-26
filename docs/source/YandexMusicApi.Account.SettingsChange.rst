@@ -1,15 +1,15 @@
 SettingsChange
 =====================================
-This method is needed to change your account settings. Send the data in JSON format. If you don't know how, look at the Account.ShowSettings method.
+Этот метод нужен для изменения настроек аккаунта. Данные надо отправлять в JSON. Если вы не знаете как, гляньте метод Account.ShowSettings
 
 
-Input data:
+Входные данные:
 -----------
 
-* Token
-* JSON data
+* Токен
+* JSON данные
 
-Usage example:
+Пример использования:
 ---------
 .. code-block:: csharp
      :linenos:

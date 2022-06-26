@@ -1,16 +1,16 @@
 GetTrack
 ==================================
-Returns songs of an artist.
+Возвращает треки исполнителей
 
 
-Input data:
+Входные данные:
 -----------
 
-* Artist ID. string artistId
-* Output page. string page. Default value: 0
-* Output size (how much elements in a page). string pageSize. Default value: 20
+* ID артиста. string artistId
+* Страница выдачи. string page. Параметр по умолчанию 0
+* Размер выдачи (кол-во элементов в ней). string pageSize. Параметр по умолчанию 20
 
-Usage example:
+Пример использования:
 ---------
 .. code-block:: csharp
      :linenos:

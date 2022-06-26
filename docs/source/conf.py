@@ -23,7 +23,8 @@ project = 'YandexMusicApi'
 copyright = 'KirMozor <https://github.com/KirMozor>'
 author = 'KirMozor'
 
-language = 'en'
+locale_dirs = ['locale/']
+#language = 'en'
 
 gettext_uuid = 'true'
 

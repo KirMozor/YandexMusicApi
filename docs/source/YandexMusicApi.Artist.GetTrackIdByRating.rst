@@ -1,14 +1,14 @@
 GetTrackIdByRating
 ==================================
-Returns artist's best tracks.
+Возвращает лучшие треки артиста
 
 
-Input data:
+Входные данные:
 -----------
 
-* Artist ID. string artistId
+* ID артиста. string artistId
 
-Usage example:
+Пример использования:
 ---------
 .. code-block:: csharp
      :linenos:

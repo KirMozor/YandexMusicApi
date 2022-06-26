@@ -1,13 +1,13 @@
 Promocode
 ================================
-This method redeems a promocode to your account.
+Этот метод активирует промокод на ваш аккаунт
 
-Input data:
+Входные данные:
 ----------
 
-* Token
-* Promocode: string promocode
-* Language: string language
+* Токен
+* Промокод: string promocode
+* Язык: string language
 
 Пример использования:
 ----------
