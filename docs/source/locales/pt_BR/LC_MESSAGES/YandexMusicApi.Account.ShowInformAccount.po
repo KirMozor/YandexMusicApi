@@ -1,0 +1,45 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) KirMozor <https://github.com/KirMozor>
+# This file is distributed under the same license as the YandexMusicApi
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: YandexMusicApi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-26 16:11+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../YandexMusicApi.Account.ShowInformAccount.rst:2
+#: e3368a8af4894c11bca367c14134f2e9
+msgid "ShowInformAccount"
+msgstr ""
+
+#: ../../YandexMusicApi.Account.ShowInformAccount.rst:3
+#: 24772274aaf74b509020b3a0925e3837
+msgid "Возвращает информацию об аккаунте"
+msgstr ""
+
+#: ../../YandexMusicApi.Account.ShowInformAccount.rst:7
+#: 85d3d4e28b2c4881afd04af439c4eec9
+msgid "Входные данные:"
+msgstr ""
+
+#: ../../YandexMusicApi.Account.ShowInformAccount.rst:9
+#: 7f77b42885ae4a8c85f63127d5be8cbe
+msgid "Токен"
+msgstr ""
+
+#: ../../YandexMusicApi.Account.ShowInformAccount.rst:12
+#: 291c7edbe92e4d8bbc2b36c4b2a5a65a
+msgid "Пример использования:"
+msgstr ""
+

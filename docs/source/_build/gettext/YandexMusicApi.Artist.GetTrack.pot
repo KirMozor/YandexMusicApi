@@ -1,0 +1,52 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) KirMozor <https://github.com/KirMozor>
+# This file is distributed under the same license as the YandexMusicApi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: YandexMusicApi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-26 16:11+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../YandexMusicApi.Artist.GetTrack.rst:2
+#: e80fc3379d21498a9ea6549d46644ecb
+msgid "GetTrack"
+msgstr ""
+
+#: ../../YandexMusicApi.Artist.GetTrack.rst:3
+#: 842942810eb84acdb06558a2c9668c09
+msgid "Возвращает треки исполнителей"
+msgstr ""
+
+#: ../../YandexMusicApi.Artist.GetTrack.rst:7
+#: edecc2e8d9dd4dde9945e11fbbc29f3d
+msgid "Входные данные:"
+msgstr ""
+
+#: ../../YandexMusicApi.Artist.GetTrack.rst:9
+#: 2aa9b63982c8498398d60a765de3eb30
+msgid "ID артиста. string artistId"
+msgstr ""
+
+#: ../../YandexMusicApi.Artist.GetTrack.rst:10
+#: a80a3c816c6a44229a521ecb7506b5ac
+msgid "Страница выдачи. string page. Параметр по умолчанию 0"
+msgstr ""
+
+#: ../../YandexMusicApi.Artist.GetTrack.rst:11
+#: 7107a95ec0304f1fb2eb541914e004cb
+msgid "Размер выдачи (кол-во элементов в ней). string pageSize. Параметр по умолчанию 20"
+msgstr ""
+
+#: ../../YandexMusicApi.Artist.GetTrack.rst:14
+#: 1ce1a8661eab41a083f5d39795de95bc
+msgid "Пример использования:"
+msgstr ""

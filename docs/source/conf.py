@@ -25,6 +25,8 @@ author = 'KirMozor'
 
 language = 'en'
 
+gettext_uuid = 'true'
+
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
