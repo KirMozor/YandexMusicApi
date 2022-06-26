@@ -1,7 +1,8 @@
 Welcome to YandexMusicApi wiki
 ============================
 
-Here I will try to explain in a simple way how to use the API. Let's start from the simplest, here's how to install the library into your project:
+Here, I'll try to explain how to use the API in a simple way.
+Let's start from the simplest. Here's how to add the library into your project:
 ::
   dotnet add PROJECTNAME package YandexMusicApi
 
