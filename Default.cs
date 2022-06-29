@@ -41,16 +41,15 @@ namespace YandexMusicApi
             return adResponse;
         }
 
-        public static JObject GetAllFeed()
+        public static JObject GetAllFeed(int page = 0)
         {
             if (Token.token != "")
             {
-                string urlToRequest = "/feed";
-                List<string> header = new List<string>();
-
-                header.Add("accept: */*");
-                header.Add("Authorization: OAuth " + Token.token);
-
+                string urlToRequest = "/feed?page=" + page;
+                Dictionary<string, string> header = new Dictionary<string, string>();
+                header.Add("accept", "application/json");
+                header.Add("Authorization", "OAuth " + Token.token);
+                
                 string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
 
                 JObject adResponse =
@@ -68,7 +67,7 @@ namespace YandexMusicApi
         public static JObject GetChart()
         {
             string urlToRequest = "/landing3/chart";
-            List<string> header = new List<string>();
+            Dictionary<string, string> header = new Dictionary<string, string>();
             
             string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
 
@@ -83,10 +82,9 @@ namespace YandexMusicApi
             if (Token.token != "")
             {
                 string urlToRequest = "/landing3?blocks=new-releases";
-                List<string> header = new List<string>();
-            
-                header.Add("accept: */*");
-                header.Add("Authorization: OAuth " + Token.token);
+                Dictionary<string, string> header = new Dictionary<string, string>();
+                header.Add("accept", "application/json");
+                header.Add("Authorization", "OAuth " + Token.token);
             
                 string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
 
@@ -107,10 +105,9 @@ namespace YandexMusicApi
             if (Token.token != "")
             {
                 string urlToRequest = "/landing3/new-playlists";
-                List<string> header = new List<string>();
-            
-                header.Add("accept: */*");
-                header.Add("Authorization: OAuth " + Token.token);
+                Dictionary<string, string> header = new Dictionary<string, string>();
+                header.Add("accept", "application/json");
+                header.Add("Authorization", "OAuth " + Token.token);
             
                 string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
 
@@ -129,10 +126,9 @@ namespace YandexMusicApi
         public static JObject GetPodcasts()
         {
             string urlToRequest = "/landing3/podcasts";
-            List<string> header = new List<string>();
-            
-            header.Add("accept: */*");
-            header.Add("Authorization: OAuth " + Token.token);
+            Dictionary<string, string> header = new Dictionary<string, string>();
+            header.Add("accept", "application/json");
+            header.Add("Authorization", "OAuth " + Token.token);
             
             string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
 

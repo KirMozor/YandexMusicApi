@@ -17,12 +17,10 @@ namespace YandexMusicApi
             if (Token.token != "")
             {
                 string urlToRequest = "/users/" + userId + "/likes/tracks/add-multiple";
-
-                List<string> header = new List<string>();
-
-                header.Add("accept: application/json");
-                header.Add("Content-Type: application/x-www-form-urlencoded");
-                header.Add("Authorization: OAuth " + Token.token);
+                Dictionary<string, string> header = new Dictionary<string, string>();
+                header.Add("accept", "application/json");
+                header.Add("Content-Type", "application/x-www-form-urlencoded");
+                header.Add("Authorization", "OAuth " + Token.token);
 
                 string likeTracksIdString = "";
                 int countTracksId = likeTracks.Count;
@@ -52,12 +50,10 @@ namespace YandexMusicApi
             if (Token.token != "")
             {
                 string urlToRequest = "/users/" + userId + "/likes/tracks/remove";
-
-                List<string> header = new List<string>();
-
-                header.Add("accept: application/json");
-                header.Add("Content-Type: application/x-www-form-urlencoded");
-                header.Add("Authorization: OAuth " + Token.token);
+                Dictionary<string, string> header = new Dictionary<string, string>();
+                header.Add("accept", "application/json");
+                header.Add("Content-Type", "application/x-www-form-urlencoded");
+                header.Add("Authorization", "OAuth " + Token.token);
 
                 string removeTracksIdString = "";
                 int countTracksId = likeTracks.Count;
@@ -86,10 +82,8 @@ namespace YandexMusicApi
         public static JObject GetLikesTrack(string userId)
         {
             string urlToRequest = "/users/" + userId + "/likes/tracks";
-
-            List<string> header = new List<string>();
-
-            header.Add("accept: application/json");
+            Dictionary<string, string> header = new Dictionary<string, string>();
+            header.Add("accept", "application/json");
 
             string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
 
@@ -101,11 +95,9 @@ namespace YandexMusicApi
         public static JObject GetInformTrack(List<string> idTracks)
         {
             string urlToRequest = "/tracks";
-
-            List<string> header = new List<string>();
-
-            header.Add("accept: application/json");
-            header.Add("Content-Type: application/x-www-form-urlencoded");
+            Dictionary<string, string> header = new Dictionary<string, string>();
+            header.Add("accept", "application/json");
+            header.Add("Content-Type", "application/x-www-form-urlencoded");
 
             string tracksIdString = "";
             int countTracksId = idTracks.Count;
@@ -127,10 +119,8 @@ namespace YandexMusicApi
         public static JObject GetDownloadInfo(string trackId)
         {
             string urlToRequest = "/tracks/" + trackId + "/download-info";
-
-            List<string> header = new List<string>();
-
-            header.Add("accept: application/json");
+            Dictionary<string, string> header = new Dictionary<string, string>();
+            header.Add("accept", "application/json");
 
             string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
 
@@ -144,11 +134,9 @@ namespace YandexMusicApi
             if (Token.token != "")
             {
                 string urlToRequest = "/tracks/" + trackId + "/download-info";
-
-                List<string> header = new List<string>();
-
-                header.Add("accept: application/json");
-                header.Add("Authorization: OAuth " + Token.token);
+                Dictionary<string, string> header = new Dictionary<string, string>();
+                header.Add("accept", "application/json");
+                header.Add("Authorization", "OAuth " + Token.token);
 
                 string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
 
@@ -198,10 +186,8 @@ namespace YandexMusicApi
         public static JObject GetTrackSimilar(string trackId)
         {
             string urlToRequest = "/tracks/" + trackId + "/similar";
-
-            List<string> header = new List<string>();
-
-            header.Add("accept: application/json");
+            Dictionary<string, string> header = new Dictionary<string, string>();
+            header.Add("accept", "application/json");
 
             string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
 
@@ -214,11 +200,9 @@ namespace YandexMusicApi
             if (Token.token != "")
             {
                 string urlToRequest = "/users/" + userId + "/dislikes/tracks";
-
-                List<string> header = new List<string>();
-
-                header.Add("accept: application/json");
-                header.Add("Authorization: OAuth AQAAAABKDB_oAAG8XqPrRfHG50TTuJ97XwurTds");
+                Dictionary<string, string> header = new Dictionary<string, string>();
+                header.Add("accept", "application/json");
+                header.Add("Authorization", "OAuth " + Token.token);
 
                 string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
 
@@ -235,11 +219,9 @@ namespace YandexMusicApi
         public static JObject GetSupplement(string trackId)
         {
             string urlToRequest = "/tracks/" + trackId + "/supplement";
-
-            List<string> header = new List<string>();
-
-            header.Add("accept: application/json");
-
+            Dictionary<string, string> header = new Dictionary<string, string>();
+            header.Add("accept", "application/json");
+            
             string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
 
             dynamic adResponse = JsonConvert.DeserializeObject(result);

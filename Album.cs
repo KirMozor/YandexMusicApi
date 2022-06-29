@@ -11,10 +11,8 @@ namespace YandexMusicApi
         public static JObject InformAlbum(string albumId)
         {
             string urlToRequest = "/albums/" + albumId;
-
-            List<string> header = new List<string>();
-
-            header.Add("accept: application/json");
+            Dictionary<string, string> header = new Dictionary<string, string>();
+            header.Add("accept", "application/json");
 
             string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
             JObject adResponse =
@@ -25,10 +23,8 @@ namespace YandexMusicApi
         public static JObject GetTracks(string albumId)
         {
             string urlToRequest = "/albums/" + albumId + "/with-tracks";
-
-            List<string> header = new List<string>();
-
-            header.Add("accept: application/json");
+            Dictionary<string, string> header = new Dictionary<string, string>();
+            header.Add("accept", "application/json");
 
             string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
             JObject adResponse =
@@ -39,10 +35,10 @@ namespace YandexMusicApi
         public static JObject MoreInformAlbums(List<string> albumsId)
         {
             string urlToRequest = "/albums";
-            List<string> header = new List<string>();
+            Dictionary<string, string> header = new Dictionary<string, string>();
 
-            header.Add("accept: application/json");
-            header.Add("Content-Type: application/x-www-form-urlencoded");
+            header.Add("accept", "application/json");
+            header.Add("Content-Type", "application/x-www-form-urlencoded");
 
             string albumsIdString = "";
             int countAlbumsId = albumsId.Count;

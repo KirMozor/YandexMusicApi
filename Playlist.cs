@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -13,10 +12,9 @@ namespace YandexMusicApi
         {
             string urlToRequest = "/users/" + uid + "/playlists/" + kind + "?page=" + page + "&page-size=" + pageSize;
 
-            List<string> header = new List<string>();
-
-            header.Add("accept: application/json");
-            header.Add("Content-Type: application/x-www-form-urlencoded");
+            Dictionary<string, string> header = new Dictionary<string, string>();
+            header.Add("accept", "application/json");
+            header.Add("Content-Type", "application/x-www-form-urlencoded");
 
             string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
             JObject adResponse =
@@ -29,10 +27,9 @@ namespace YandexMusicApi
             if (Token.token != "")
             {
                 string urlToRequest = "/users/" + userId + "/playlists/list";
-                List<string> header = new List<string>();
-
-                header.Add("accept: application/json");
-                header.Add("Authorization: OAuth " + Token.token);
+                Dictionary<string, string> header = new Dictionary<string, string>();
+                header.Add("accept", "application/json");
+                header.Add("Authorization", "OAuth " + Token.token);
 
                 string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
                 JObject adResponse =
@@ -49,9 +46,8 @@ namespace YandexMusicApi
         public static JObject InformPlaylist(string playlistUid, string playlistKind)
         {
             string urlToRequest = "/users/" + playlistUid + "/playlists/" + playlistKind;
-            List<string> header = new List<string>();
-
-            header.Add("accept: */*");
+            Dictionary<string, string> header = new Dictionary<string, string>();
+            header.Add("accept", "*/*");
 
             string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
             JObject adResponse =

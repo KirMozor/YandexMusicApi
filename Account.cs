@@ -13,10 +13,9 @@ namespace YandexMusicApi
             if (Token.token != "")
             {
                 string urlToRequest = "/account/experiments";
-                List<string> header = new List<string>();
-
-                header.Add("accept: */*");
-                header.Add("Authorization: OAuth " + Token.token);
+                Dictionary<string, string> header = new Dictionary<string, string>();
+                header.Add("accept", "*/*");
+                header.Add("Authorization", "OAuth " + Token.token);
 
                 string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
                 JObject adResponse =
@@ -37,10 +36,10 @@ namespace YandexMusicApi
                 string urlToRequest = "/account/consume-promo-code";
                 string dataPost = "code=" + promocode + "&language=" + language;
 
-                List<string> header = new List<string>();
-                header.Add("accept: application/json");
-                header.Add("Authorization: OAuth " + Token.token);
-                header.Add("Content-Type: application/x-www-form-urlencoded");
+                Dictionary<string, string> header = new Dictionary<string, string>();
+                header.Add("accept", "application/json");
+                header.Add("Authorization", "OAuth " + Token.token);
+                header.Add("Content-Type", "application/x-www-form-urlencoded");
 
                 string result = PostGet.PostDataAndHeaders(BaseUrl + urlToRequest, dataPost, header);
                 JObject adResponse = JsonConvert.DeserializeObject<JObject>(result);
@@ -58,9 +57,9 @@ namespace YandexMusicApi
             if (Token.token != "")
             {
                 string urlToRequest = "/account/settings";
-                List<string> header = new List<string>();
-                header.Add("accept: application/json");
-                header.Add("Authorization: OAuth " + Token.token);
+                Dictionary<string, string> header = new Dictionary<string, string>();
+                header.Add("accept", "application/json");
+                header.Add("Authorization", "OAuth " + Token.token);
 
                 string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
                 JObject adResponse = JsonConvert.DeserializeObject<JObject>(result);
@@ -79,10 +78,10 @@ namespace YandexMusicApi
             {
                 string urlToRequest = "/account/settings";
 
-                List<string> header = new List<string>();
-                header.Add("accept: application/json");
-                header.Add("Authorization: OAuth " + Token.token);
-                header.Add("Content-Type: application/x-www-form-urlencoded");
+                Dictionary<string, string> header = new Dictionary<string, string>();
+                header.Add("accept", "application/json");
+                header.Add("Authorization", "OAuth " + Token.token);
+                header.Add("Content-Type:", "application/x-www-form-urlencoded");
 
                 string result = PostGet.PostDataAndHeaders(BaseUrl + urlToRequest, data, header);
                 JObject adResponse = JsonConvert.DeserializeObject<JObject>(result);
@@ -101,9 +100,9 @@ namespace YandexMusicApi
             {
                 string urlToRequest = "/account/status";
 
-                List<string> header = new List<string>();
-                header.Add("accept: application/json");
-                header.Add("Authorization: OAuth " + Token.token);
+                Dictionary<string, string> header = new Dictionary<string, string>();
+                header.Add("accept", "application/json");
+                header.Add("Authorization", "OAuth " + Token.token);
 
                 string result = PostGet.GetWithHeaders(BaseUrl + urlToRequest, header);
                 JObject adResponse = JsonConvert.DeserializeObject<JObject>(result);
