@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -8,11 +9,11 @@ namespace YandexMusicApi
     {
         private const string BaseUrl = "https://api.music.yandex.net:443";
 
-        public static JObject StationList(string language = "ru")
+        public static JObject StationList(string language = "ru", string page = "0", string pageSize = "10")
         {
             if (Token.token != "")
             {
-                string urlToRequest = "/rotor/stations/list?language=" + language;
+                string urlToRequest = "/rotor/stations/list?language=" + language + "&page=" + page + "&page-size=" + pageSize;
                 List<string> header = new List<string>();
 
                 header.Add("accept: */*");
