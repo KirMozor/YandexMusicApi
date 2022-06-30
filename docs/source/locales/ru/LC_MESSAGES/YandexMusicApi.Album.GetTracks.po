@@ -20,21 +20,21 @@ msgstr ""
 
 #: ../../YandexMusicApi.Album.GetTracks.rst:2 dd86e3cbb6d442a49a28c572e0aa8331
 msgid "GetTracks"
-msgstr ""
+msgstr "GetTracks"
 
 #: ../../YandexMusicApi.Album.GetTracks.rst:3 22f2f73a172c42e78b4ec6f08c61cc3b
 msgid "Возвращает треки альбома"
-msgstr ""
+msgstr "Возвращает треки альбома"
 
 #: ../../YandexMusicApi.Album.GetTracks.rst:7 90bd04ccf1f14d528f43b78f25aae5fa
 msgid "Входные данные:"
-msgstr ""
+msgstr "Входные данные:"
 
 #: ../../YandexMusicApi.Album.GetTracks.rst:9 8b062d92a5bf4d7ab7a0f55a93ee5304
 msgid "ID альбома. string albumId"
-msgstr ""
+msgstr "ID альбома. string albumId"
 
 #: ../../YandexMusicApi.Album.GetTracks.rst:12 3f3bfd77673e4886951a4a781a8496f3
 msgid "Пример использования:"
-msgstr ""
+msgstr "Пример использования:"
 

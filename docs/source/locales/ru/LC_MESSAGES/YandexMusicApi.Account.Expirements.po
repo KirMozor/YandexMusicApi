@@ -21,7 +21,7 @@ msgstr ""
 #: ../../YandexMusicApi.Account.Expirements.rst:2
 #: 805124da957840bc97528bebc0493817
 msgid "Expirements"
-msgstr ""
+msgstr "Expirements"
 
 #: ../../YandexMusicApi.Account.Expirements.rst:3
 #: 5b2027709e2e414ea7ebf65e8820e15a
@@ -29,19 +29,21 @@ msgid ""
 "Этот метод нужен чтобы показать, учавствует ли ваш аккаунт в "
 "экспериментах Yandex"
 msgstr ""
+"Этот метод нужен чтобы показать, учавствует ли ваш аккаунт в "
+"экспериментах Yandex"
 
 #: ../../YandexMusicApi.Account.Expirements.rst:7
 #: c930ccee6a3a4ed7aaf012128dd7a8ff
 msgid "Входные данные:"
-msgstr ""
+msgstr "Входные данные:"
 
 #: ../../YandexMusicApi.Account.Expirements.rst:9
 #: 96426fda490a4c1e9857b53bc4b3fbfb
 msgid "Токен"
-msgstr ""
+msgstr "Токен"
 
 #: ../../YandexMusicApi.Account.Expirements.rst:12
 #: 03adf6c03c554c939e475fba7ec21558
 msgid "Пример использования:"
-msgstr ""
+msgstr "Пример использования:"
 

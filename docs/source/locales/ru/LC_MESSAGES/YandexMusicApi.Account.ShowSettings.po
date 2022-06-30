@@ -21,25 +21,25 @@ msgstr ""
 #: ../../YandexMusicApi.Account.ShowSettings.rst:2
 #: 0fa7bfa4afc5400fb804c3c12f30474d
 msgid "ShowSettings"
-msgstr ""
+msgstr "ShowSettings"
 
 #: ../../YandexMusicApi.Account.ShowSettings.rst:3
 #: 83e56005ad9247938b914384f89cf80c
 msgid "Показывает настройки аккаунта"
-msgstr ""
+msgstr "Показывает настройки аккаунта"
 
 #: ../../YandexMusicApi.Account.ShowSettings.rst:7
 #: f26632cc75194477870aaf6b146e7da9
 msgid "Входные данные:"
-msgstr ""
+msgstr "Входные данные:"
 
 #: ../../YandexMusicApi.Account.ShowSettings.rst:9
 #: 3fd0b2a261584bb39e15445e0ff4c077
 msgid "Токен"
-msgstr ""
+msgstr "Токен"
 
 #: ../../YandexMusicApi.Account.ShowSettings.rst:12
 #: a347c5a249fc4793a5b5db0374d272d8
 msgid "Пример использования:"
-msgstr ""
+msgstr "Пример использования:"
 

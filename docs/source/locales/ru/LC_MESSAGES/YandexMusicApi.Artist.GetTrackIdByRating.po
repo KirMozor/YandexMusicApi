@@ -21,25 +21,25 @@ msgstr ""
 #: ../../YandexMusicApi.Artist.GetTrackIdByRating.rst:2
 #: 6ef2d84edd24441b97073e0c42e9a0f6
 msgid "GetTrackIdByRating"
-msgstr ""
+msgstr "GetTrackIdByRating"
 
 #: ../../YandexMusicApi.Artist.GetTrackIdByRating.rst:3
 #: 41e668f907994cceb7c1f289a39833a7
 msgid "Возвращает лучшие треки артиста"
-msgstr ""
+msgstr "Возвращает лучшие треки артиста"
 
 #: ../../YandexMusicApi.Artist.GetTrackIdByRating.rst:7
 #: 7b692d0b2fe74605ba4ca23d49f1aea0
 msgid "Входные данные:"
-msgstr ""
+msgstr "Входные данные:"
 
 #: ../../YandexMusicApi.Artist.GetTrackIdByRating.rst:9
 #: d31c7b1d1899423c8e2165f483809608
 msgid "ID артиста. string artistId"
-msgstr ""
+msgstr "ID артиста. string artistId"
 
 #: ../../YandexMusicApi.Artist.GetTrackIdByRating.rst:12
 #: 4cf415e7e6d542b983c3686e7321c4bf
 msgid "Пример использования:"
-msgstr ""
+msgstr "Пример использования:"
 

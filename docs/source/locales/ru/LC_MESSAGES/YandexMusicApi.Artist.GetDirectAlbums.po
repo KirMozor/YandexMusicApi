@@ -21,27 +21,27 @@ msgstr ""
 #: ../../YandexMusicApi.Artist.GetDirectAlbums.rst:2
 #: f9925e9c93d947189d73f8cff8581c61
 msgid "GetDirectAlbums"
-msgstr ""
+msgstr "GetDirectAlbums"
 
 #: ../../YandexMusicApi.Artist.GetDirectAlbums.rst:3
 #: e64253a73e0d4c249c15dfae3022e5d5
 msgid "Возвращает альбомы артиста"
-msgstr ""
+msgstr "Возвращает альбомы артиста"
 
 #: ../../YandexMusicApi.Artist.GetDirectAlbums.rst:7
 #: c96c86d1eba141c5b2b03bff95d4f1be
 msgid "Входные данные:"
-msgstr ""
+msgstr "Входные данные:"
 
 #: ../../YandexMusicApi.Artist.GetDirectAlbums.rst:9
 #: 1041b50dad674481ad45e070e7cc7ce7
 msgid "ID артиста. string artistId"
-msgstr ""
+msgstr "ID артиста. string artistId"
 
 #: ../../YandexMusicApi.Artist.GetDirectAlbums.rst:10
 #: 2586a33cbba942ec88f7bd7349dec505
 msgid "Страница выдачи. string page. Параметр по умолчанию 0"
-msgstr ""
+msgstr "Страница выдачи. string page. Параметр по умолчанию 0"
 
 #: ../../YandexMusicApi.Artist.GetDirectAlbums.rst:11
 #: 221c2567b4ca42718b2c13495b2f4ae8
@@ -49,9 +49,11 @@ msgid ""
 "Размер выдачи (кол-во элементов на ней). string pageSize. Параметр по "
 "умолчанию 20"
 msgstr ""
+"Размер выдачи (кол-во элементов на ней). string pageSize. Параметр по "
+"умолчанию 20"
 
 #: ../../YandexMusicApi.Artist.GetDirectAlbums.rst:14
 #: 396135df23fe4390908a7ab715eb61a9
 msgid "Пример использования:"
-msgstr ""
+msgstr "Пример использования:"
 

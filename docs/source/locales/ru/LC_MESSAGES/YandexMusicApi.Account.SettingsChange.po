@@ -21,7 +21,7 @@ msgstr ""
 #: ../../YandexMusicApi.Account.SettingsChange.rst:2
 #: e06da2b3ff6b496a87f42253d5ecdc49
 msgid "SettingsChange"
-msgstr ""
+msgstr "SettingsChange"
 
 #: ../../YandexMusicApi.Account.SettingsChange.rst:3
 #: 4ca221dbb0ab45819813e04786613fe8
@@ -29,24 +29,26 @@ msgid ""
 "Этот метод нужен для изменения настроек аккаунта. Данные надо отправлять "
 "в JSON. Если вы не знаете как, гляньте метод Account.ShowSettings"
 msgstr ""
+"Этот метод нужен для изменения настроек аккаунта. Данные надо отправлять "
+"в JSON. Если вы не знаете как, гляньте метод Account.ShowSettings"
 
 #: ../../YandexMusicApi.Account.SettingsChange.rst:7
 #: a007bbe4b6844517ab07f7161fd70b1c
 msgid "Входные данные:"
-msgstr ""
+msgstr "Входные данные:"
 
 #: ../../YandexMusicApi.Account.SettingsChange.rst:9
 #: dea3b187cf194e158e5028fb19903eec
 msgid "Токен"
-msgstr ""
+msgstr "Токен"
 
 #: ../../YandexMusicApi.Account.SettingsChange.rst:10
 #: 6dd3de0f14bf445a802eb3c6ca3644aa
 msgid "JSON данные"
-msgstr ""
+msgstr "JSON данные"
 
 #: ../../YandexMusicApi.Account.SettingsChange.rst:13
 #: 513adf521a8c4688830b72c682fef317
 msgid "Пример использования:"
-msgstr ""
+msgstr "Пример использования:"
 

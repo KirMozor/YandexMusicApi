@@ -20,9 +20,9 @@ msgstr ""
 
 #: ../../YandexMusicApi.Account.rst:2 2c09185d99c149d6821b32bd2136e1e7
 msgid "YandexMusicApi.Account"
-msgstr ""
+msgstr "YandexMusicApi.Account"
 
 #: ../../YandexMusicApi.Account.rst:5 1827e6ffc5644aa1912d223a3bc67047
 msgid "Submodules"
-msgstr ""
+msgstr "Submodules"
 

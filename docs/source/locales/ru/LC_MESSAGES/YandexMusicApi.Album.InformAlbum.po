@@ -21,25 +21,25 @@ msgstr ""
 #: ../../YandexMusicApi.Album.InformAlbum.rst:2
 #: 833186c7b3524db78a6831e04959b863
 msgid "InformAlbum"
-msgstr ""
+msgstr "InformAlbum"
 
 #: ../../YandexMusicApi.Album.InformAlbum.rst:3
 #: ad3c12706abe4cad93c72ff0f6c0dbc8
 msgid "Возвращает информацию об альбоме"
-msgstr ""
+msgstr "Возвращает информацию об альбоме"
 
 #: ../../YandexMusicApi.Album.InformAlbum.rst:7
 #: ad2b9536647a47a9a83e8da067d9fda2
 msgid "Входные данные:"
-msgstr ""
+msgstr "Входные данные:"
 
 #: ../../YandexMusicApi.Album.InformAlbum.rst:9
 #: 01f5e694e9364ca2988a730ade96a35a
 msgid "ID альбома. string albumId"
-msgstr ""
+msgstr "ID альбома. string albumId"
 
 #: ../../YandexMusicApi.Album.InformAlbum.rst:12
 #: 05f3b4575e6e4e3b99e6c83f9d182067
 msgid "Пример использования:"
-msgstr ""
+msgstr "Пример использования:"
 

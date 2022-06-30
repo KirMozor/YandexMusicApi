@@ -20,5 +20,5 @@ msgstr ""
 
 #: ../../modules.rst:2 091d4770d35b41ccbb09f17d1e09f9f2
 msgid "yandex_music"
-msgstr ""
+msgstr "yandex_music"
 

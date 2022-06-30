@@ -21,35 +21,35 @@ msgstr ""
 #: ../../YandexMusicApi.Account.Promocode.rst:2
 #: 76ce436f83584ab9acb157a8f17967ee
 msgid "Promocode"
-msgstr ""
+msgstr "Promocode"
 
 #: ../../YandexMusicApi.Account.Promocode.rst:3
 #: 05bcd1238e5e4c6f8da3e5762fd1a76c
 msgid "Этот метод активирует промокод на ваш аккаунт"
-msgstr ""
+msgstr "Этот метод активирует промокод на ваш аккаунт"
 
 #: ../../YandexMusicApi.Account.Promocode.rst:6
 #: c3e734eb2b0e4be0b04fe1b0fc5494a7
 msgid "Входные данные:"
-msgstr ""
+msgstr "Входные данные:"
 
 #: ../../YandexMusicApi.Account.Promocode.rst:8
 #: 77edd2a4ff504d0e90c68df5b27c64e9
 msgid "Токен"
-msgstr ""
+msgstr "Токен"
 
 #: ../../YandexMusicApi.Account.Promocode.rst:9
 #: a3f914ee8a794334ade7dc4160e2946c
 msgid "Промокод: string promocode"
-msgstr ""
+msgstr "Промокод: string promocode"
 
 #: ../../YandexMusicApi.Account.Promocode.rst:10
 #: 0ed5d630a48a4dbca1c3b2a8d8fddc07
 msgid "Язык: string language"
-msgstr ""
+msgstr "Язык: string language"
 
 #: ../../YandexMusicApi.Account.Promocode.rst:13
 #: 53f8028846314a91a8b9b04cc95646d1
 msgid "Пример использования:"
-msgstr ""
+msgstr "Пример использования:"
 

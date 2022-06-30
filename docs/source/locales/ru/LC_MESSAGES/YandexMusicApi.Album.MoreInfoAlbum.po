@@ -29,19 +29,21 @@ msgid ""
 "Возвращает ещё бооольше информации об альбомах чем InfoAlbum, можно "
 "кинуть сразу кучу id-шников"
 msgstr ""
+"Возвращает ещё бооольше информации об альбомах чем InfoAlbum, можно "
+"кинуть сразу кучу id-шников"
 
 #: ../../YandexMusicApi.Album.MoreInfoAlbum.rst:7
 #: 1ad630bfa6e044be80e01a797c49a022
 msgid "Входные данные:"
-msgstr ""
+msgstr "Входные данные:"
 
 #: ../../YandexMusicApi.Album.MoreInfoAlbum.rst:9
 #: ab4a621ad3a44cd0a4c0581fc2ef087f
 msgid "ID альбомов. List<string> albumsId"
-msgstr ""
+msgstr "ID альбомов. List<string> albumsId"
 
 #: ../../YandexMusicApi.Album.MoreInfoAlbum.rst:12
 #: 2c5d86818b914fa9900702aa1ba3d729
 msgid "Пример использования:"
-msgstr ""
+msgstr "Пример использования:"
 

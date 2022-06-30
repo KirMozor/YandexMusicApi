@@ -21,25 +21,25 @@ msgstr ""
 #: ../../YandexMusicApi.Artist.GetBriefInfo.rst:2
 #: c7bf7fa589264341881805fdf5331ecb
 msgid "GetBriefInfo"
-msgstr ""
+msgstr "GetBriefInfo"
 
 #: ../../YandexMusicApi.Artist.GetBriefInfo.rst:3
 #: 768355d0cb8b4cde83f926baf08816a2
 msgid "Возвращает новости артиста"
-msgstr ""
+msgstr "Возвращает новости артиста"
 
 #: ../../YandexMusicApi.Artist.GetBriefInfo.rst:7
 #: 6a4fdaa5670d414590931f776b56b99f
 msgid "Входные данные:"
-msgstr ""
+msgstr "Входные данные:"
 
 #: ../../YandexMusicApi.Artist.GetBriefInfo.rst:9
 #: a38325df074a4b14ab8debc26dffc0df
 msgid "ID артиста. string artistId"
-msgstr ""
+msgstr "ID артиста. string artistId"
 
 #: ../../YandexMusicApi.Artist.GetBriefInfo.rst:12
 #: 1918dac264d448599c844501d459f8bc
 msgid "Пример использования:"
-msgstr ""
+msgstr "Пример использования:"
 

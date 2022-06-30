@@ -67,10 +67,10 @@ namespace YandexMusicApi
                 switch (i.Key)
                 {
                     case "accept":
-                        request.Headers.Add(HttpRequestHeader.Accept, i.Value);
+                        request.Accept = i.Value;
                         break;
                     case "Content-Type":
-                        request.Headers.Add(HttpRequestHeader.ContentType, i.Value);
+                        request.ContentType = i.Value;
                         break;
                     case "Authorization":
                         request.Headers.Add(HttpRequestHeader.Authorization, i.Value);
@@ -100,10 +100,10 @@ namespace YandexMusicApi
                 switch (i.Key)
                 {
                     case "accept":
-                        request.Headers.Add(HttpRequestHeader.Accept, i.Value);
+                        request.Accept = i.Value;
                         break;
                     case "Content-Type":
-                        request.Headers.Add(HttpRequestHeader.ContentType, i.Value);
+                        request.ContentType = i.Value;
                         break;
                     case "Authorization":
                         request.Headers.Add(HttpRequestHeader.Authorization, i.Value);

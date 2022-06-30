@@ -20,9 +20,9 @@ msgstr ""
 
 #: ../../YandexMusicApi.Artist.rst:2 c418acad700b45c5bafedd93b441eedb
 msgid "YandexMusicApi.Artist"
-msgstr ""
+msgstr "YandexMusicApi.Artist"
 
 #: ../../YandexMusicApi.Artist.rst:5 74a8c83757a846b2ab5065cb5341770c
 msgid "Submodules"
-msgstr ""
+msgstr "Submodules"
 
