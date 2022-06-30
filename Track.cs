@@ -109,7 +109,6 @@ namespace YandexMusicApi
                     tracksIdString += idTracks[i] + ",";
 
             string dataRequest = "track-ids=" + tracksIdString + "&with-positions=false";
-
             string result = PostGet.PostDataAndHeaders(BaseUrl + urlToRequest, dataRequest, header);
             JObject adResponse =
                 JsonConvert.DeserializeObject<JObject>(result);
