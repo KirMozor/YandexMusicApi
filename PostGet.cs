@@ -19,7 +19,7 @@ namespace YandexMusicApi
         public static string PostReq(string url, string data)
         {
             string resultPost;
-            HttpWebRequest request = (HttpWebRequest) WebRequest.Create(url);
+            HttpWebRequest request = (HttpWebRequest) HttpWebRequest.Create(url);
             request.UserAgent = UserAgent;
             request.Method = "POST";
             byte[] byteArray = Encoding.UTF8.GetBytes(data);
@@ -42,7 +42,7 @@ namespace YandexMusicApi
         public static string Get(string url)
         {
             string resultPost;
-            HttpWebRequest request = (HttpWebRequest) WebRequest.Create(url);
+            HttpWebRequest request = (HttpWebRequest) HttpWebRequest.Create(url);
             request.UserAgent = UserAgent;
             request.Method = "GET";
             WebResponse response = request.GetResponse();
@@ -59,7 +59,7 @@ namespace YandexMusicApi
         public static string GetWithHeaders(string url, Dictionary<string, string> header)
         {
             string resultPost;
-            HttpWebRequest request = (HttpWebRequest) WebRequest.Create(url);
+            HttpWebRequest request = (HttpWebRequest) HttpWebRequest.Create(url);
             request.UserAgent = UserAgent;
             request.Method = "GET";
             foreach (var i in header)
@@ -91,7 +91,7 @@ namespace YandexMusicApi
         public static string PostDataAndHeaders(string url, string data, Dictionary<string, string> header)
         {
             string resultPost;
-            HttpWebRequest request = (HttpWebRequest) WebRequest.Create(url);
+            HttpWebRequest request = (HttpWebRequest) HttpWebRequest.Create(url);
             request.UserAgent = UserAgent;
             request.Method = "POST";
             byte[] byteArray = Encoding.UTF8.GetBytes(data);
