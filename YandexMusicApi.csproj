@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <PackageId>YandexMusicApi</PackageId>
-        <version>1.1.8</version>
+        <version>1.2.0</version>
 		<Authors>KirMozor</Authors>
         <Description>Open-Source wrapper over the Yandex Music Api</Description>
         <PackageIconUrl>https://download.cdn.yandex.net/from/yandex.ru/support/ru/music/files/icon_main.png</PackageIconUrl>

@@ -13,13 +13,13 @@ namespace YandexMusicApi
         {
             AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
         };
-        //private static HttpClient client = new HttpClient(handler);
         private const string UserAgent =
             "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36";
         public static string PostReq(string url, string data)
         {
             string resultPost;
             HttpWebRequest request = (HttpWebRequest) HttpWebRequest.Create(url);
+            request.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
             request.UserAgent = UserAgent;
             request.Method = "POST";
             byte[] byteArray = Encoding.UTF8.GetBytes(data);
@@ -43,6 +43,7 @@ namespace YandexMusicApi
         {
             string resultPost;
             HttpWebRequest request = (HttpWebRequest) HttpWebRequest.Create(url);
+            request.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
             request.UserAgent = UserAgent;
             request.Method = "GET";
             WebResponse response = request.GetResponse();
@@ -60,6 +61,7 @@ namespace YandexMusicApi
         {
             string resultPost;
             HttpWebRequest request = (HttpWebRequest) HttpWebRequest.Create(url);
+            request.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
             request.UserAgent = UserAgent;
             request.Method = "GET";
             foreach (var i in header)
@@ -92,6 +94,7 @@ namespace YandexMusicApi
         {
             string resultPost;
             HttpWebRequest request = (HttpWebRequest) HttpWebRequest.Create(url);
+            request.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
             request.UserAgent = UserAgent;
             request.Method = "POST";
             byte[] byteArray = Encoding.UTF8.GetBytes(data);
