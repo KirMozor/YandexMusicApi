@@ -1,5 +1,7 @@
 [![Nuget API](https://img.shields.io/nuget/dt/YandexMusicApi)](https://www.nuget.org/packages/YandexMusicApi/)
 
+# Repository moved to [GitLab](https://gitlab.com/KirMozor/YandexMusicApi)
+
 # YandexMusicApi
 
 ### _Cross-platform Yandex Music API for C#_
